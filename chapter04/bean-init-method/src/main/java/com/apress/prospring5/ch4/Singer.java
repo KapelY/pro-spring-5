@@ -28,7 +28,7 @@ public class Singer {
 
         if (age == Integer.MIN_VALUE) {
             throw new IllegalArgumentException(
-                    "You must set the age property of any beans of type " + Singer.class);
+                    "\nYou must set the age property of any beans of type --- " + Singer.class);
         }
     }
 

@@ -19,6 +19,7 @@ public class AliasConfigDemo {
 		//@Bean(name="johnMayer")
 		//@Bean(name = "jon johnny,jonathan;jim")
 		@Bean(name = {"johnMayer", "john", "jonathan", "johnny"})
+//		@Bean
 		public Singer singer() {
 			return new Singer();
 		}
