@@ -8,7 +8,8 @@ public class MessageDigestDemo {
         ctx.load("classpath:spring/app-context-xml.xml");
         ctx.refresh();
 
-        MessageDigester digester = (MessageDigester) ctx.getBean("digester");
+//        MessageDigester digester = (MessageDigester) ctx.getBean("digester");
+        MessageDigester digester = ctx.getBean("digester", MessageDigester.class);
         digester.digest("Hello World!");
 
         ctx.close();
