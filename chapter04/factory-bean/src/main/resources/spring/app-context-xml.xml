@@ -10,7 +10,8 @@
       p:algorithmName="SHA1"/>
 
     <bean id="defaultDigest" 
-        class="com.apress.prospring5.ch4.MessageDigestFactoryBean"/>
+        class="com.apress.prospring5.ch4.MessageDigestFactoryBean"
+      p:algorithmName="MD5"/>
 
     <bean id="digester" 
         class="com.apress.prospring5.ch4.MessageDigester"

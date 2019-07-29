@@ -16,6 +16,6 @@
         p:filePath=
         "#{systemProperties['java.io.tmpdir']}#{systemProperties['file.separator']}test.txt"/>
 
-    <bean id="shutdownHook" 
+    <bean id="shutdownHook"
         class="com.apress.prospring5.ch4.ShutdownHookBean"/>
 </beans>

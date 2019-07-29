@@ -30,7 +30,7 @@ public class SingerWithJSR250 {
 
         if (age == Integer.MIN_VALUE) {
             throw new IllegalArgumentException(
-                    "You must set the age property of any beans of type " + 
+                    "\nYou must set the age property of any beans of type " +
                     SingerWithJSR250.class);
         }
     }

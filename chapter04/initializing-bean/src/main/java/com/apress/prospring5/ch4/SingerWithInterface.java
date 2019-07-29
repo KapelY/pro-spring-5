@@ -57,7 +57,7 @@ public class SingerWithInterface implements InitializingBean {
             System.out.println(bean);
             return bean;
         } catch (BeanCreationException ex) {
-            System.out.println("An error occurred in bean configuration: "
+            System.out.println("\nAn error occurred in bean configuration: "
                     + ex.getMessage());
             return null;
         }

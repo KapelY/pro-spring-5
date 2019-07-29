@@ -7,7 +7,8 @@ import org.springframework.beans.factory.InitializingBean;
 
 public class MessageDigestFactoryBean implements 
       FactoryBean<MessageDigest>, InitializingBean {
-    private String algorithmName = "MD5";
+    private String algorithmName;
+//    private String algorithmName = "MD5";
 
     private MessageDigest messageDigest = null;
 
