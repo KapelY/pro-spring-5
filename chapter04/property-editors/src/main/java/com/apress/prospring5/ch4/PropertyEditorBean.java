@@ -3,6 +3,7 @@ package com.apress.prospring5.ch4;
 import java.io.File;
 import java.io.InputStream;
 import java.net.URL;
+import java.text.MessageFormat;
 import java.util.*;
 import java.util.regex.Pattern;
 import java.text.SimpleDateFormat;
@@ -55,7 +56,7 @@ public class PropertyEditorBean {
     }
 
     public void setUrl(URL url) {
-        System.out.println("Setting URL: " + url.toExternalForm());
+        System.out.println(MessageFormat.format("Setting URL: {0}", url));
         this.url = url;
     }
 
