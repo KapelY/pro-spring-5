@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Profile;
 public class HighschoolConfig {
 
 	@Bean
-	public FoodProviderService foodProviderService(){
+	public FoodProviderService foodProviderService() {
 		return new FoodProviderServiceImpl();
 	}
 }

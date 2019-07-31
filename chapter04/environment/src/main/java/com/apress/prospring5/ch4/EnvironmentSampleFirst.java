@@ -22,11 +22,13 @@ public class EnvironmentSampleFirst {
 
         propertySources.addFirst(new MapPropertySource("prospring5_MAP", appMap));
 
-        System.out.println("user.home: " + System.getProperty("user.home"));
-        System.out.println("JAVA_HOME: " + System.getenv("JAVA_HOME"));
+        System.out.println("System user.home: " + System.getProperty("user.home"));
+        System.out.println("System JAVA_HOME: " + System.getenv("JAVA_HOME"));
 
-        System.out.println("user.home: " + env.getProperty("user.home"));
-        System.out.println("JAVA_HOME: " + env.getProperty("JAVA_HOME"));
+        System.out.println("Env user.home: " + env.getProperty("user.home"));
+        System.out.println("Env JAVA_HOME: " + env.getProperty("JAVA_HOME"));
+
+        System.out.println("application.home: " + env.getProperty("application.home"));
 
         ctx.close();
     }
