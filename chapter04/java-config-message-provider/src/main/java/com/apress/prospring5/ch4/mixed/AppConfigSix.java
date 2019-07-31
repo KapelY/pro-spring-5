@@ -13,6 +13,6 @@ public class AppConfigSix {
 
 	@Bean
 	public MessageProvider provider() {
-		return new ConfigurableMessageProvider("Love on the weekend");
+		return new ConfigurableMessageProvider("Love on the weekend SIX");
 	}
 }

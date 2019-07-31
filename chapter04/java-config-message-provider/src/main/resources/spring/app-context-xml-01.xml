@@ -7,6 +7,6 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
    <bean id="provider" class="com.apress.prospring5.ch4.ConfigurableMessageProvider"
-         p:message="Love on the weekend" />
+         p:message="Love on the weekend 5" />
 
 </beans>

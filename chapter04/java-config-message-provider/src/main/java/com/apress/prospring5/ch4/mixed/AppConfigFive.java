@@ -14,8 +14,11 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @ImportResource(value="classpath:spring/app-context-xml-01.xml")
 public class AppConfigFive {
-	@Autowired
-	MessageProvider provider;
+	private final MessageProvider provider;
+
+	public AppConfigFive(MessageProvider provider) {
+		this.provider = provider;
+	}
 
 
 	@Bean(name = "messageRenderer")
