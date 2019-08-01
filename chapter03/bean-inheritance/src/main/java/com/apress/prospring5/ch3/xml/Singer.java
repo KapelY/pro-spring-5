@@ -1,8 +1,5 @@
 package com.apress.prospring5.ch3.xml;
 
-/**
- * Created by iuliana.cosmina on 2/25/17.
- */
 public class Singer {
     private String name;
     private int age;

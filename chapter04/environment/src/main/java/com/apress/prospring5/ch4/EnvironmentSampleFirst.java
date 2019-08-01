@@ -28,8 +28,6 @@ public class EnvironmentSampleFirst {
         System.out.println("Env user.home: " + env.getProperty("user.home"));
         System.out.println("Env JAVA_HOME: " + env.getProperty("JAVA_HOME"));
 
-        System.out.println("application.home: " + env.getProperty("application.home"));
-
         ctx.close();
     }
 }
