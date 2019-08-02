@@ -28,11 +28,11 @@ public class ProfilingInterceptor implements MethodInterceptor {
         System.out.println("On object of type: " + 
                 target.getClass().getName());
 
-        System.out.println("With arguments:");
+        System.out.print("With arguments:");
         for (int x = 0; x < args.length; x++) {
             System.out.print("       > " + args[x]);
         }
-        System.out.print("\n");
+        System.out.println();
 
         System.out.println("Took: " + ms + " ms");
     }
