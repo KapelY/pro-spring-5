@@ -21,7 +21,7 @@ public class AfterAdviceDemo {
                 long key = keyGen.getKey();
                 System.out.println("Key: " + key);
             } catch(SecurityException ex) {
-                System.out.println("Weak Key Generated!");
+                System.out.println("Weak Key Generated!" + ex.getMessage());
             }
         }
     }

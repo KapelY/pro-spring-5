@@ -16,7 +16,7 @@ public class WeakKeyCheckAdvice implements AfterReturningAdvice {
 
             if (key == WEAK_KEY) {
                 throw new SecurityException(
-                    "Key Generator generated a weak key. Try again");
+                    " --! Key Generator generated a weak key. Try again: " + key);
             }
         }
     }

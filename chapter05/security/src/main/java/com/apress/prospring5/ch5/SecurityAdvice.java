@@ -12,14 +12,13 @@ public class SecurityAdvice implements MethodBeforeAdvice {
     }
 
     @Override
-    public void before(Method method, Object[] args, Object target)
-            throws Throwable {
+    public void before(Method method, Object[] args, Object target) {
         UserInfo user = securityManager.getLoggedOnUser();
 
         if (user == null) {
             System.out.println("No user authenticated");
             throw new SecurityException(
-                "You must login before attempting to invoke the method: " 
+                "You must login before attempting to invoke the method: "
                 + method.getName());
         } else if ("John".equals(user.getUserName())) {
             System.out.println("Logged in user is John - OKAY!");
