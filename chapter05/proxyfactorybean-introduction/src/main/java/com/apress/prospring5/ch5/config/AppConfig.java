@@ -15,6 +15,7 @@ public class AppConfig {
 
 	@Bean
 	public Contact guitarist() {
+		System.out.println("guitarist");
 		Contact guitarist = new Contact();
 		guitarist.setName("John Mayer");
 		return guitarist;
@@ -22,10 +23,12 @@ public class AppConfig {
 
 	@Bean
 	public Advisor advisor() {
+		System.out.println("advisor");
 		return new IsModifiedAdvisor();
 	}
 
 	@Bean ProxyFactoryBean bean() {
+		System.out.println("proxyfactory");
 		ProxyFactoryBean proxyFactoryBean = new ProxyFactoryBean();
 		proxyFactoryBean.setTarget(guitarist());
 		proxyFactoryBean.setProxyTargetClass(true);

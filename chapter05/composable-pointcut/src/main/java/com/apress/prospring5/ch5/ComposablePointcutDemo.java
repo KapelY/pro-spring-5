@@ -17,8 +17,9 @@ public class ComposablePointcutDemo {
         ComposablePointcut pc = new ComposablePointcut(ClassFilter.TRUE, 
             new SingMethodMatcher());
 
-        System.out.println("Test 1 >> ");
         GrammyGuitarist proxy = getProxy(pc, johnMayer);
+        
+        System.out.println("Test 1 >> ");
         testInvoke(proxy);
         System.out.println();
 

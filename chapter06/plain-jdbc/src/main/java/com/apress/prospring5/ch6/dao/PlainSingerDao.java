@@ -17,14 +17,17 @@ public class PlainSingerDao implements SingerDao {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException ex) {
-			logger.error("Prblem loadng DB dDiver!", ex);
+			logger.error("Problem loading DB dDiver!", ex);
 		}
 	}
 
 	private Connection getConnection() throws SQLException {
-		return DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/musicdb?useSSL=true",
+		System.out.println("before getConnection");
+		Connection connection = DriverManager.getConnection(
+				"jdbc:mysql://localhost:3306/MUSICDB?useSSL=true",
 				"prospring5", "prospring5");
+		System.out.println("Database connection established");
+		return connection;
 	}
 
 	private void closeConnection(Connection connection) {
@@ -44,9 +47,11 @@ public class PlainSingerDao implements SingerDao {
 		Connection connection = null;
 		try {
 			connection = getConnection();
+			System.out.println("after connection");
 			PreparedStatement statement =
 					connection.prepareStatement("select * from singer");
 			ResultSet resultSet = statement.executeQuery();
+			System.out.println("before while");
 			while (resultSet.next()) {
 				Singer singer = new Singer();
 				singer.setId(resultSet.getLong("id"));

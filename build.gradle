@@ -18,7 +18,7 @@ ext {
 	aspectjVersion = '1.8.13'
 	derbyVersion = '10.13.1.1'
 	dbcpVersion = '2.1'
-	mysqlVersion = '6.0.6'
+	mysqlVersion = '8.0.17'
 	h2Version = '1.4.194'
 	jodaVersion = '2.9.9'
 	utVersion = '6.0.1.GA'

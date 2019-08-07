@@ -92,7 +92,7 @@ public class ProxyPerfTest {
         System.out.println("Took " + (after - before) / 1000000 + " ms");
 
         Advised advised = (Advised)bean;
-
+        System.out.println(advised.getClass().getName());
         System.out.println("Testing Advised.getProxyTargetClass() Method");
         before = System.nanoTime();
         for(int x = 0; x < 500000; x++) {

@@ -8,13 +8,13 @@ import org.springframework.aop.support.DynamicMethodMatcherPointcut;
 public class SimpleDynamicPointcut extends DynamicMethodMatcherPointcut {
     @Override
     public boolean matches(Method method, Class<?> cls) {
-        System.out.println("Static check for " + method.getName());
+        System.out.println("Static check for --- " + method.getName());
         return ("foo".equals(method.getName()));
     }
 
     @Override
     public boolean matches(Method method, Class<?> cls, Object... args) {
-        System.out.println("Dynamic check for " + method.getName());
+        System.out.println("Dynamic check for --- " + method.getName());
 
         int x = (Integer) args[0];
 
