@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -44,14 +45,14 @@ public class DBInitializer {
 		singer.setFirstName("John");
 		singer.setLastName("Mayer");
 		singer.setBirthDate(new Date(
-				(new GregorianCalendar(1977, 9, 16)).getTime().getTime()));
+				(new GregorianCalendar(1977, Calendar.OCTOBER, 16)).getTime().getTime()));
 		singer.addInstrument(guitar);
 		singer.addInstrument(piano);
 
 		Album album1 = new Album();
 		album1.setTitle("The Search For Everything");
 		album1.setReleaseDate(new java.sql.Date(
-				(new GregorianCalendar(2017, 0, 20)).getTime().getTime()));
+				(new GregorianCalendar(2017, Calendar.JANUARY, 20)).getTime().getTime()));
 		singer.addAlbum(album1);
 
 		Album album2 = new Album();
